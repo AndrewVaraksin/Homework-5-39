@@ -1,0 +1,722 @@
+html, body{
+  font-family: Lato,sans-serif;
+  color: #5f647b;
+  line-height: 160%;
+}
+
+.wrapper{
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+  /* из-за border-box pad. включен в ширину, поэтому +30px */
+  max-width: 1260px;
+  /* чтобы не прилипал контент */
+  padding: 0 15px;
+  /* выравнивает контент по центру, за счет отступов по бокам */
+  margin: 0 auto;
+  height: 100%;
+}
+
+.main__about{
+  padding: 180px 0 160px;
+}
+.main__directions{
+  padding-bottom: 180px;
+}
+.main__cert{
+  margin-bottom: -46px;
+}
+.main__team{
+  padding: 160px 0px 180px;
+}
+.button{
+  display: inline-block;
+  letter-spacing: 0.5;
+  line-height: 52px;
+  font-weight: 700;
+  padding: 0 40px;
+  color: #fff;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #FF3F3A 0%, #F75E05 100%);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.button:hover{
+  /* для плавного увеличения кнопки */
+  transform: scale(1.05);
+}
+.button--empty{
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+  border-right: 2px solid #F75E05;
+  background-image: -webkit-linear-gradient(left, #FF3F3A, #F75E05), -webkit-linear-gradient(left, #FF3F3A, #F75E05);
+  background-image: linear-gradient(left, #FF3F3A, #F75E05), linear-gradient(left, #FF3F3A, #F75E05);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+.button--empty span{
+  background: linear-gradient(45deg, #FF3F3A 0%, #F75E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading {
+  color: #1E212C;
+}
+.heading--text-center {
+  text-align: center;
+}
+
+.heading__subtitles{
+  line-height: 150%;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.heading__title{
+  font-size: 46px;
+font-style: normal;
+font-weight: 900;
+line-height: 130%;
+}
+
+/* --------------------------------------- */
+
+.header {
+  font-weight: 700;
+  background: url("../images/decor/shapes-first.svg") 50% 50% / cover no-repeat,linear-gradient(55.95deg , rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Отступы свурху и снизу для всего хедера, чтобы не прилипал к краю */
+  padding: 20px 0;
+}
+.header__logo {
+  margin-right: 60px;
+}
+
+.header__nav {
+  margin-right: auto;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-item {
+  /* расстояние между ссылками */
+  margin-right: 40px;
+}
+.header__nav-item:last-child{
+  /* убираем margin справа у последнего элемента */
+  margin-right: 0;
+}
+.header__nav-link {
+  /* чтобы не переносились слова */
+  white-space: nowrap;
+  line-height: 1.6;
+  transition: all 0.3s;
+}
+
+.header__nav-link:hover{
+  color: #FF3F3A;
+}
+
+.header__btn-box {
+  display: flex;
+  align-items: center;
+}
+.header__top-btn {
+  margin-right: 36px;
+}
+.header__user-nav{
+  position: relative;
+  /* сама иконка 20px и пробел м/у ними 8px */
+  padding-left: 28px;
+}
+.header__user-nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* Для установки иконки по центру top и transform */
+  transform: translateY(-50%);
+  display: block;
+  background: url(../images/icons/profile.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.header__user-btn {
+  white-space: nowrap;
+  line-height: 1.6;
+  transition: all 0.3s;
+}
+.header__user-btn:hover{
+  color: #FF3F3A;
+}
+/* ------------------------------------------------------- */
+
+.header__body{
+  flex: 1 1 auto;
+}
+.header__body-inner{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E212C;
+  margin: auto 0;
+}
+.header__content {
+  padding-right: 30px;
+}
+.header__play {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.header__play svg {
+  margin-right: 16px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.header__play:hover svg{
+  box-shadow: 0 0 0 16px rgba(255, 63, 58, 0.12);
+}
+.header__title {
+font-size: 64px;
+font-weight: 900;
+line-height: 130%;
+letter-spacing: 1px;
+max-width: 500px;
+margin-bottom: 60px;
+}
+.header__content-buttons {
+  display: flex;
+}
+.header__content-btn {
+  margin-right: 24px;
+}
+.header__content-btn:last-child{
+  margin-right: 0px;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E212C;
+  margin-bottom: 80px;
+}
+.header__row> span {
+  width: 8px;
+  height: 8px;
+  background: #FF3F3A;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+.header__row-item {
+  display: flex;
+  align-items: center;
+}
+.header__row-item span{
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  margin-right: 12px;
+}
+/* -------------------------------------------------- */
+
+.about {
+
+}
+
+.about__inner{
+  
+}
+
+.about__createx{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 180px;
+  position: relative;
+}
+.about__createx::before{
+  /* Подключение шейпа, заданы position, сделано, чтобы не предселовал при уменьш. экрана */
+  content: "";
+  position: absolute;
+  top: -83px;
+  right: -210px;
+  background: url(../images/decor/shapes-about.svg);
+  width: 100px;
+  height: 85px;
+}
+.about__createx-content{
+  max-width: 600px;
+  margin-right: 30px;
+}
+
+.about__heading{
+  margin-bottom: 48px;
+}
+.about__text{
+  margin-bottom: 60px;
+}
+.about__paragraph{
+  margin-bottom: 24px;
+}
+.about__paragraph:last-child{
+  margin-bottom: 0px;
+}
+
+.about__paragraph--accent{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #1E212C;
+}
+
+.about__btn-box{
+  display: flex;
+}
+
+.about__btn{
+  margin-right: 24px;
+}
+.about__btn:last-child{
+  margin-right: 0px;
+}
+
+.about__img{}
+
+.about__values{
+  display: flex;
+  justify-content: space-between;
+}
+.about__image-box{
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about__image-box img{
+  /* Чтобы при уменьшении div изображение тоже корректно уменьш. */
+  widows: 100%;
+  /* Изобр. высотой всегда с контейнер, и уменьш ширина если нужно */
+  height: 100%;
+  object-fit: cover;
+}
+.about__numbers {
+  margin-left: 30px;
+  align-self: center;
+}
+.about__number span{
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: #FF3F3A;
+  margin-right: 16px;
+
+}
+.about__number {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.about__number:last-child {
+  margin-bottom: 0px;
+}
+/* ------------------------------------------- */
+.directions{
+  /* padding-bottom: 180px; */
+}
+
+.directions__inner{
+  position: relative;
+  padding-bottom: 180px;
+}
+.directions__inner::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: -218px;
+  width: 136px;
+  height: 115px;
+  background: url("../images/decor/Group-dots-about.svg") 0 0 no-repeat;
+}
+.directions__inner::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 396px;
+  right: -420px;
+  width: 242px;
+  height: 242px;
+  background: url("../images/decor/circles-about.svg") 0 0 no-repeat;
+}
+
+.directions__heading{
+  margin-bottom: 90px;
+}
+
+.directions__body{}
+
+.directions__filter-box{
+  display: flex;
+  margin-bottom: 56px;
+}
+
+.directions__filter-item{
+  margin-right: 45px;
+}
+.directions__filter-item:last-child{
+  margin-right: 0px;
+}
+
+
+.directions__filter-btn{
+  background-color: transparent;
+  color: #9A9CA5;
+  border: 1px solid #9A9CA5;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 7px;
+  line-height: 1;
+}
+
+.directions__filter-btn--active{
+  background: linear-gradient(45deg, #FF3F3A 0%, #F75E05 100%);
+  border: none;
+  color: #fff;
+  padding: 6px 8px;
+}
+
+.directions__list{
+  display: grid;
+  grid-template: repeat(2, auto)/repeat(3, 1fr);
+  gap: 30px;
+}
+
+.directions__list-item{
+  
+}
+
+.directions__list-link{
+  display: block;
+  border-radius: 4px;
+  /* чтобы картинка имела закругленные углы */
+  overflow: hidden;
+  transition: all 1s;
+}
+.directions__list-link:hover{
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  /* добавлено, чтобы при hover все быстро, но когда убираешь то медленно */
+  transition: all 0.3s;
+}
+.directions__list-link:hover .directions__link-btn{
+  color: #FF3F3A;
+  transition: all 0.3s;
+}
+
+.directions__image-box img{
+  /* чтобы расстягивались на всю ширину родителя */
+  width: 100%;
+  height: 100%;
+}
+
+.directions__link-content{
+  display: flex;
+  padding: 24px;
+  /* чтобы задать размер и указать align-self */
+  flex-direction: column;
+  /* Border чтобы сделать норм скругление углов, без пробелов по углам */
+  border: 1px solid #E5E8ED;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.directions__link-tag{
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.directions__link-text{
+  color: #787A80;
+  margin-bottom: 20px;
+}
+
+.directions__link-btn{
+  display: flex;
+  color: #1E212C;
+  font-weight: 700;
+  transition: all 1s;
+}
+.directions__link-btn::after{
+  /* чтобы появилась сттрелка по url */
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../images/icons/arrow-right.svg) 0 2px /100% no-repeat;
+  margin-left: 11px;
+}
+.directions__list-item--marketing .directions__link-tag{
+  background-color: #03CEA4;
+}
+.directions__list-item--management .directions__link-tag{
+  background-color: #5A87FC;
+}
+.directions__list-item--hr .directions__link-tag{
+  background-color: #F89828;
+}
+.directions__list-item--design .directions__link-tag{
+  background-color: #F52F6E;
+}
+.directions__list-item--development .directions__link-tag{
+  background-color: #7772F1;
+}
+
+.directions__list-item--empty{
+  background: #F4F5F6;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.directions__list-item--empty span{
+  max-width: 240px;
+}
+/* ---------------------------------------------------------- */
+
+.cert {
+}
+.cert__inner{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.cert__inner::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: -213px;
+  width: 60px;
+  height: 60px;
+  background: url("../images/decor/shapes-left-directions.svg") 0 0 no-repeat;
+}
+.container {
+}
+.cert__content {
+  margin-right: 30px;
+  max-width: 430px;
+}
+.cert__content p{
+  color: #424551;
+}
+.cert__heading {
+  margin-bottom: 50px;
+}
+.cert__text {
+  margin-bottom: 30px;
+}
+.cert__image-box {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.10), 0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+}
+.cert__logos {
+  display: flex;
+}
+.cert__logos-item {
+  margin-right: 40px;
+}
+.cert__logos-item:last-child {
+  margin-right: 0px;
+}
+/* ------------------------------------------------------------ */
+.team{
+  background: url("../images/decor/team-bg-group.svg") 150px 70px no-repeat,  #F4F5F6;
+}
+.team__inner {
+}
+.team__heading {
+  margin-bottom: 60px;
+  position: relative;
+}
+.team__slider .slick-list{
+  margin: 0 -15px;
+}
+.team__slide {
+  padding: 0 15px;
+}
+.team__slide:hover .team__socials{
+  transform: translateY(0%);
+}
+/* .team__slide {
+  padding-right: 30px;
+}
+.team__slide:last-child {
+  padding-right: 0px;
+} */
+.team__image-box {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.team__image {
+  position: relative;
+  height: 340px;
+}
+.team__image img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team__socials {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0px;
+  /* Нужно, чтобы элемент расстянулся на всюширину родителя */
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.90%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+  transform: translateY(50%);
+  transition: all .3s;
+}
+.team__socials-item {
+  margin-right: 12px;
+}
+.team__socials-item:last-child {
+  margin-right: 0px;
+}
+.team__socials-link{
+  /* делаем ссылки чуть ниже */
+  display: block;
+  line-height: 0;
+}
+.team__socials-link path{
+  transition: all .3s;
+}
+.team__socials-link:hover path{
+  fill: #fff;
+}
+.team__info {
+  text-align: center;
+}
+.team__info-name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 5px;
+}
+.team__info-position {
+  color: #787A80;
+}
+
+.team__slider-arrows{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.team__slider-arrows{
+  display: flex;
+  z-index: 1;
+}
+.team__slider-arrow{
+  display: block;
+  line-height: 0;
+  border-radius: 50%;
+  position: relative;
+}
+
+.team__slider-arrow path {
+  transition: all .3s;
+}
+.team__slider-arrow::before{
+  content: "";
+  /* чтобы точно разместить по центру абсолютом */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 48px;
+  height: 48px;
+  background-color: #FF3F3A;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all .3s;
+}
+.team__slider-arrow:hover::before{
+  transform: translate(-50%, -50%) scale(1);
+}
+.team__slider-arrow:hover path {
+  fill: #fff;
+}
+.team__slider-prev {
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.team__slider-next {
+  width: 24px;
+  height: 24px;
+}
+.team__slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team__slider .slick-dots li{
+  list-style: none;
+  margin: 0 10px;
+  margin-top: 30px;
+}
+.team__slider .slick-dots button{
+  font-size: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #a49292;
+}
+.team__slider .slick-dots li.slick-active button{
+  background-color: transparent;
+  border: 1px solid #1E212C;
+
+}
